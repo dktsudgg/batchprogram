@@ -1,0 +1,26 @@
+server:
+  port: 8092
+
+property:
+  test:
+    name: property depth test
+propertyTest: test
+propertyTestList: a,b,c
+propertyKyoujin: limkj
+
+fruit:
+  list:
+    - name: banana
+      color: yellow
+    - name: apple
+      color: red
+    - name: water melon
+      color: green
+
+fruit.testProperty: fruit test string
+
+fruit.test-property2: aa
+
+fruit.test_property3: bb
+
+fruit.testproperty4: cc
