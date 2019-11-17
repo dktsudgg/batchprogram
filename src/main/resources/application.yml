@@ -24,3 +24,14 @@ fruit.test-property2: aa
 fruit.test_property3: bb
 
 fruit.testproperty4: cc
+
+# H2 메모리 DB를 사용하기 위한 설정
+# https://docs.spring.io/spring-boot/docs/current/reference/html/ 참고...
+# Common Application properties 섹션 참고하면됨..
+datasource:
+  url: jdbc:h2:mem:testdb
+
+spring:
+  h2:
+    console:
+      enabled: true

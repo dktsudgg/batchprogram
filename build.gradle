@@ -21,6 +21,9 @@ dependencies {
 	// 롬복 설정..
 	compileOnly 'org.projectlombok:lombok:1.18.10'
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+	// H2
+	runtime('com.h2database:h2')
 }
 
 test {
