@@ -1,4 +1,4 @@
-package com.spring.yup.batchprogram;
+package com.spring.yup.batchprogram.aboutconfig;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-import java.util.Map;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;

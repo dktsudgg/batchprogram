@@ -1,11 +1,10 @@
-package com.spring.yup.batchprogram;
+package com.spring.yup.batchprogram.aboutconfig;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Map;
 
 // @Data 어노테이션은 롬복 설정임..
 // 롬복 사용하기 위해서 프로젝트에 롬복 설정하는 방법!!!!!

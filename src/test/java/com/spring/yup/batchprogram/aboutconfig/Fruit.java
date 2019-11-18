@@ -1,4 +1,4 @@
-package com.spring.yup.batchprogram;
+package com.spring.yup.batchprogram.aboutconfig;
 
 import lombok.Data;
 
