@@ -43,7 +43,7 @@ public class User implements Serializable {
     private LocalDateTime updatedDate;
 
     @Builder
-    public User(Long idx, String name, String password, String email, LocalDateTime createdDate
+    public User(Long idx, String name, String password, String email, String principal, SocialType socialType, LocalDateTime createdDate
             , LocalDateTime updatedDate) {
         this.idx = idx;
         this.name = name;

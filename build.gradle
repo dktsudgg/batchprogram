@@ -1,3 +1,40 @@
+/*buildscript {
+	ext{
+		springBootVersion = '1.5.14.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.security.oauth:spring-security-oauth2')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.thymeleaf.extras:thymeleaf-extras-java8time')
+	runtime('com.h2database:h2')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	// 롬복 설정..
+	compileOnly 'org.projectlombok:lombok:1.18.10'
+	annotationProcessor 'org.projectlombok:lombok:1.18.10'
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}*/
+
+// Oauth2 관련 디펜던시 설정 부분 참고한 링크.. https://hue9010.github.io/spring/OAuth2/
 plugins {
 	id 'org.springframework.boot' version '2.2.1.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
@@ -20,10 +57,16 @@ configurations {
 
 repositories {
 	mavenCentral()
+	//If you are using a SNAPSHOT version
+	maven { url 'https://repo.spring.io/snapshot' }
+	//If you are using a milestone or release candidate version
+	//현재는 SNAPSHOT 버전이기 때문에 필요 없습니다.
+	//maven { url 'https://repo.spring.io/milestone' }
 }
 
 dependencies {
 
+	compile 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.1.BUILD-SNAPSHOT'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -39,6 +82,9 @@ dependencies {
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+		// 아래 두줄 추가함..
+		testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+		testCompile group: 'org.assertj', name: 'assertj-core', version: '3.12.2'
 	}
 }
 

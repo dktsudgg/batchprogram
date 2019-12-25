@@ -12,6 +12,7 @@ public enum SocialType {
         this.name = name;
     }
 
+    // ROLE_* 형식으로 소셜 미디어 권한명 설정..
     public String getRoleType() {
         return ROLE_PREFIX + name.toUpperCase();
     }
