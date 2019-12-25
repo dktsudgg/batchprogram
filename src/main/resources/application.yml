@@ -62,6 +62,7 @@ google:
 kakao:
   client:
     clientId: clientIdTest
-    accessTokenUri: https://kauth.kakao.com/oauth/authorize
+    accessTokenUri: https://kauth.kakao.com/oauth/token
+    userAuthorizationUri: https://kauth.kakao.com/oauth/authorize
   resource:
     userInfoUri: https://kapi.kakao.com/v1/user/me
